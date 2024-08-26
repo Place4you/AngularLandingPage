@@ -1,25 +1,86 @@
-<header class=" border-orange-800 border-2 p-0 m-0 h-100 bg-blue-500" >
+<header class="p-0 m-0 h-100" >
 
-    <nav class=" flex justify-between border-green-800 border-2">
-        <div class="flex justify-center items-center">
-            <img src="assets/logo.png" width="auto" height="150px" alt="Logo">     
+<!-- app.component.html -->
+<nav class="flex justify-between items-center p-5 bg-white shadow-md">
+    <!-- Logo (visible on mobile only) -->
+    <div class="lg:hidden flex justify-center items-center">
+      <img src="/assets/logo.png" width="auto" height="150px" alt="Logo">
+    </div>
+  
+    <!-- Desktop Navigation Links -->
+    <div class="hidden lg:flex flex-grow justify-center items-center space-x-4 text-xl font-bold">
+      <a href="#" class="hover:text-blue-500">Product</a>
+      <a href="#" class="hover:text-blue-500">Features</a>
+      <a href="#" class="hover:text-blue-500">Marketplace</a>
+      <a href="#" class="hover:text-blue-500">Company</a>
+    </div>
+  
+    <!-- Desktop Login Button -->
+    <div class="hidden lg:flex">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
+    </div>
+  
+    <!-- Hamburger Icon -->
+    <div class="lg:hidden flex items-center">
+      <button (click)="toggleMenu()" class="text-2xl">
+        &#9776;
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+     @if(isMenuOpen)
+     {
+        <div  class="fixed top-0 left-0 w-full h-full z-50 transform transition-transform duration-300 ease-in-out lg:hidden">
+        <div class="flex justify-end p-5">
+            <button (click)="toggleMenu()" class="text-2xl">
+            &times;
+            </button>
         </div>
-    
-        <div class=" flex justify-center items-center px-5 font-bold ">
-            <a>Product</a>
-            <a>Features</a>
-            <a>Marketplace</a>
-            <a>Company</a>
-        </div>
-    
-        <div class="flex justify-center items-center">
+        <div class="flex flex-col items-center justify-center h-full space-y-4 text-xl font-bold bg-transparent">
+            <img src="/assets/logo.png" width="auto" height="150px" alt="Logo" class="mb-4">
+            <a href="#" class="hover:text-blue-500">Product</a>
+            <a href="#" class="hover:text-blue-500">Features</a>
+            <a href="#" class="hover:text-blue-500">Marketplace</a>
+            <a href="#" class="hover:text-blue-500">Company</a>
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
         </div>
-    
-    
-    </nav>
+        </div>
+     }
+  </nav>
+  
+  
 
-    
+    <section class="pt-32">
+        <div class=" flex  justify-center items-center  ">
+            <a href="">
+                <div class="flex  justify-center items-center p-0 m-0">
+                        <div>           
+                            <p class="  border-4 border-[#4F46E5] rounded-3xl font-inter font-medium">Announcing our next round of funding.</p>
+                        </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="w-full ">
+            <h1 class="text-6xl font-bold font-roboto text-center">Data to enrich your <br>online business</h1>
+        </div>
+
+        <div class="w-full text-center font-inter font-medium ">
+            <h3>Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem<br> cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</h3>
+        </div>
+        
+        <div class=" flex relative justify-center items-center w-full text-center font-roboto border-box max-h-14">
+            <div>
+                <a href="" class="border-2 bg-[#4F46E5] hover:bg-[#352ec0] text-white border-[#4F46E5] rounded-3xl">Getting Started</a>
+            </div>
+
+            <div class="border-box">
+                <a href="" class=" border-box text-l transition-all duration-500 ease-in-out hover:text-xl">Learn more</a>
+            </div>
+        </div>
+
+    </section>
+
 
 </header>
 

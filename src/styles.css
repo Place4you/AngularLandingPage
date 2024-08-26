@@ -8,6 +8,7 @@
     margin: 0;
     box-sizing: border-box;
     overflow: hidden;
+    font-display: swap;
 }
 html,body{
     width: 100%;
