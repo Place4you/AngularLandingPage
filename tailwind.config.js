@@ -8,10 +8,17 @@ module.exports = {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
-
-        // Add more fonts if needed
       },
+      keyframes: {
+        slideInFromRight: {
+          '0%': { transform: 'translateX(100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+      },
+      animation: {
+        slideInFromRight: 'slideInFromRight 300ms ease-in-out',
+      },
+    },
   },
   plugins: [],
-}
 }

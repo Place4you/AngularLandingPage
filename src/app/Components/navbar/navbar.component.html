@@ -1,0 +1,73 @@
+<!-- Mobile Nav (visible on mobile only) -->
+
+<nav class="flex justify-between items-center p-2">
+    <!-- Logo (visible on mobile only) -->
+    <a class="flex justify-center items-center flex-nowrap gap-2">
+      <img class="object-cover max-h-10 max-w-10" src="/assets/logo.png"  alt="Logo">
+      <span class="text-2xl font-bold font-roboto">Tailwind</span>
+    </a>
+  
+    <!--  Navigation Links -->
+    <div class="hidden lg:flex flex-grow justify-center items-center space-x-8 text-2xl font-bold">
+      <a href="#" class="hover:text-blue-500">Product</a>
+      <a href="#" class="hover:text-blue-500">Features</a>
+      <a href="#" class="hover:text-blue-500">Marketplace</a>
+      <a href="#" class="hover:text-blue-500">Company</a>
+    </div>
+  
+    <!-- Login Button -->
+    <div class="hidden lg:flex">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
+    </div>
+  
+        <!-- Hamburger Icon -->
+        <div class="lg:hidden flex items-center">
+            <button
+                (click)="toggleMenu()"
+                [ngClass]="{'rotate-360': isMenuOpen}"
+                class="text-2xl transform transition-transform duration-500 ease-in-out rotate-180"
+            >
+                &#9776;
+            </button>
+        </div>
+  
+        @if(isMenuOpen)
+        {
+          <div class="fixed grid grid-rows-12 pt-6 inset-0 bg-white animate-slideInFromRight lg:hidden">
+            <div class="pt-5 relative  row-span-1">
+              <!-- Logo (visible on mobile only) -->
+              <a class="flex justify-center items-center">
+                <img class="object-cover max-h-10 max-w-10" src="/assets/logo.png" alt="Logo">
+                <span class="text-2xl font-bold font-roboto pl-3">Tailwind</span>
+              </a>
+                
+              <!-- Close Icon -->
+              <div class="absolute top-3 right-12">
+                <button
+                  (click)="toggleMenu()"
+                  [ngClass]="{'rotate-360': !isMenuOpen}"
+                  class="text-5xl transform transition-transform duration-500 ease-in-out rotate-180 hover:cursor-zoom-in"
+                >
+                  &times;
+                </button>
+              </div>
+            </div>
+        
+            <!-- Navigation Links -->
+            <div class="pt-5 row-span-4 grid grid-cols-1 align-middle justify-items-center font-bold text-xl">
+              <a href="#" class="hover:text-blue-500 shadow-sm">Product</a>
+              <a href="#" class="hover:text-blue-500 shadow-sm">Features</a>
+              <a href="#" class="hover:text-blue-500 shadow-sm">Marketplace</a>
+              <a href="#" class="hover:text-blue-500 shadow-sm">Company</a>
+            </div>
+        
+            <!-- Login Button -->
+            <div class="flex items-center justify-center pt-5 row-span-1">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
+            </div>
+          </div>
+        }
+        
+
+
+  </nav>
