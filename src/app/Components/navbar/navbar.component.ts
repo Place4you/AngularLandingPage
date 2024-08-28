@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  isMenuOpen : Boolean = true;
+  isMenuOpen : Boolean = false;
 
   toggleMenu(){
     this.isMenuOpen = !(this.isMenuOpen);
