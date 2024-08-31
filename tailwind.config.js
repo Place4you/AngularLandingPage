@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xl': {'min': '1024px', 'max': '1724px'}, // Custom "xl" breakpoint between 1024px and 1724px
+        '2xl': '1724px', // Screens larger than 1724px
+      },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],

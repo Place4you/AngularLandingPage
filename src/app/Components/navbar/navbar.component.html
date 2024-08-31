@@ -3,7 +3,7 @@
 <nav class="flex justify-between items-center p-2">
     <!-- Logo (visible on mobile only) -->
     <a class="flex justify-center items-center flex-nowrap gap-2">
-      <img class="object-cover max-h-10 max-w-10" src="/assets/logo.png"  alt="Logo">
+      <img class="object-cover max-h-10  max-w-10" src="/assets/logo.png"  alt="Logo">
       <span class="text-2xl font-bold font-roboto">Tailwind</span>
     </a>
   
@@ -33,38 +33,57 @@
   
         @if(isMenuOpen)
         {
-          <div class="fixed grid grid-rows-12 pt-6 inset-0 bg-white animate-slideInFromRight lg:hidden">
-            <div class="pt-5 relative  row-span-1">
-              <!-- Logo (visible on mobile only) -->
-              <a class="flex justify-center items-center">
-                <img class="object-cover max-h-10 max-w-10" src="/assets/logo.png" alt="Logo">
-                <span class="text-2xl font-bold font-roboto pl-3">Tailwind</span>
-              </a>
-                
-              <!-- Close Icon -->
-              <div class="absolute top-3 right-12">
-                <button
-                  (click)="toggleMenu()"
-                  [ngClass]="{'rotate-360': !isMenuOpen}"
-                  class="text-5xl transform transition-transform duration-500 ease-in-out rotate-180 hover:cursor-zoom-in"
-                >
-                  &times;
-                </button>
+          <div class="fixed inset-0 bg-white z-30 lg:hidden animate-slideInFromRight">
+            <div class="flex flex-col h-full">
+              <div>
+                <!-- Header Section -->
+              <div class="flex items-center justify-between p-4 border-b border-gray-200">
+                <div class="flex justify-between">
+                  <!-- Logo -->
+                  <a class="flex items-center space-x-2">
+                    <img class="h-10 w-10 object-cover" src="/assets/logo.png" alt="Logo">
+                    <span class="text-2xl font-bold font-roboto">Tailwind</span>
+                  </a>
+              </div>
+              <div>
+                    <!-- Close Icon -->
+                    <button
+                    (click)="toggleMenu()"
+                    class="relative text-2xl pl-4 pb-0 mb-0 top-2 transform transition-transform duration-500 ease-in-out"
+                  >
+                  <i class="fa-solid fa-circle-xmark" style="color: #ee1b30;"></i>            
+                    </button>
+
+                </div>
+            </div>
+          
+              <!-- Navigation Links -->
+              <div class="flex flex-col p-4 space-y-4 font-bold text-xl">
+                <a href="#" class="flex items-center space-x-3 hover:text-blue-500">
+                  <i class="fa-brands fa-product-hunt text-xl"></i>
+                  <span>Product</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 hover:text-blue-500">
+                  <i class="fa-solid fa-square-poll-horizontal text-xl"></i>
+                  <span>Features</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 hover:text-blue-500">
+                  <i class="fa-solid fa-lightbulb text-xl"></i>
+                  <span>Marketplace</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 hover:text-blue-500">
+                  <i class="fa-solid fa-dragon text-xl"></i>
+                  <span>Company</span>
+                </a>
+              </div>
+          
+              <!-- Login Button -->
+              <div class="flex items-center justify-center p-4 border-t border-gray-200">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
               </div>
             </div>
-        
-            <!-- Navigation Links -->
-            <div class="pt-5 row-span-4 grid grid-cols-1 align-middle justify-items-center font-bold text-xl">
-              <a href="#" class="hover:text-blue-500 shadow-sm">Product</a>
-              <a href="#" class="hover:text-blue-500 shadow-sm">Features</a>
-              <a href="#" class="hover:text-blue-500 shadow-sm">Marketplace</a>
-              <a href="#" class="hover:text-blue-500 shadow-sm">Company</a>
-            </div>
-        
-            <!-- Login Button -->
-            <div class="flex items-center justify-center pt-5 row-span-1">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
-            </div>
+          </div>
+          
           </div>
         }
         
