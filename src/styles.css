@@ -36,3 +36,22 @@ html,body{
 .rotate-360 {
   transform: rotate(360deg);
 }
+
+
+.fade-out-left {
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-out-right {
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
