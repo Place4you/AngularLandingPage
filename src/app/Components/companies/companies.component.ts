@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-companies',
   standalone: true,
-  imports: [],
+  imports: [ ],
   templateUrl: './companies.component.html',
   styleUrl: './companies.component.css'
 })
