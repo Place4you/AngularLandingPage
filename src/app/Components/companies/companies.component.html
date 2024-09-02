@@ -1,34 +1,19 @@
 <!-- Container -->
-<div class="py-10 sm:py-16  relative overflow-hidden bg-gradient-to-r from-blue-100 to-pink-100 rounded-t-xl shadow-sm p-6">
-    <!-- Heading Row -->
-    <div class="text-center mb-6">
-      <h1 class="text-3xl font-bold">We Worked With</h1>
-
-    </div>
-  
-<!-- Icons Grid Row -->
-<div class="relative overflow-hidden">
-  <div class="flex animate-slide hover:">
-    <div class="flex justify-between space-x-12 p-6 gap-x-12 w-full">
-      <!-- Apply fadeOut to the first and last icons -->
-      <i class="fa-brands fa-apple text-4xl "></i>
-      <i class="fa-brands fa-google text-4xl"></i>
-      <i class="fa-brands fa-facebook text-4xl"></i>
-      <i class="fa-brands fa-instagram text-4xl"></i>
-      <i class="fa-brands fa-youtube text-4xl"></i>
-      <i class="fa-brands fa-whatsapp text-4xl"></i>
-      <i class="fa-brands fa-twitter text-4xl"></i>
-      <i class="fa-brands fa-amazon text-4xl"></i>
-      <i class="fa-brands fa-microsoft text-4xl"></i>
-      <i class="fa-brands fa-tiktok text-4xl"></i>
-      <i class="fa-brands fa-linkedin text-4xl"></i>
-      <i class="fa-brands fa-spotify text-4xl"></i>
-      <i class="fa-brands fa-github text-4xl "></i>
-    </div>
+<div class="py-10 sm:py-16 relative overflow-hidden bg-gradient-to-r from-blue-100 to-pink-100 rounded-t-xl shadow-lg p-8">
+  <!-- Heading Row -->
+  <div class="text-center mb-8">
+    <h1 class="text-4xl font-extrabold text-gray-800">We Worked With</h1>
   </div>
+
+    <!-- Icons Grid -->
+    <div class="w-8/10  overflow-hidden px-4">
+      <div class="flex flex-wrap gap-4 justify-around  py-4 " #iconGrid>
+        <ng-container *ngFor="let icon of icons">
+          <div class="flex justify-center items-center  p-4 bg-white rounded-full shadow-lg">
+            <i class="{{ icon }} text-5xl text-gray-700"></i>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
 </div>
-
-
-
-  </div>
-  
