@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   isMenuOpen : Boolean = false;
   isAnimatingIn:boolean= true;
+  isSticky: boolean = false;
 
 
   MobileMenu() {
@@ -24,5 +25,10 @@ export class NavbarComponent {
     setTimeout(() => {
       this.isMenuOpen = false;
     }, 300); // 300ms matches the animation duration
+}
+
+@HostListener('window:scroll', [])
+onWindowScroll() {
+  this.isSticky = window.scrollY > 100; // Adjust the scroll threshold as needed
 }
 }
