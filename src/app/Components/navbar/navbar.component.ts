@@ -25,10 +25,12 @@ export class NavbarComponent {
     setTimeout(() => {
       this.isMenuOpen = false;
     }, 300); // 300ms matches the animation duration
-}
+  }
 
-@HostListener('window:scroll', [])
-onWindowScroll() {
-  this.isSticky = window.scrollY > 100; // Adjust the scroll threshold as needed
-}
+  @HostListener('document:scroll', ['$event'])
+  public onViewportScroll(event: Event) {
+    // Your logic here
+    console.log('Scrolled!', window.scrollY);
+  }
+
 }

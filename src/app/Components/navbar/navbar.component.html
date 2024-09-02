@@ -1,5 +1,5 @@
 <!-- Mobile Nav (visible on mobile only) -->
-<nav [ngClass]="{'sticky-nav': isSticky}" class="flex justify-between items-center p-2 sticky top-0 left-0 w-full  shadow z-50" >
+<nav [ngClass]="{'sticky-nav': isSticky}" class="flex justify-between items-center p-2 sticky top-0 left-0 w-full  z-50" >
   <!-- Logo (visible on mobile only) -->
   <a class="flex justify-center items-center flex-nowrap gap-2">
     <img class="object-cover max-h-10 max-w-10" src="/assets/logo.png" alt="Logo">
@@ -32,7 +32,7 @@
 
   <!-- Conditional Rendering for Mobile Menu -->
   @if (isMenuOpen) {
-    <div [ngClass]="{'sticky-nav': isSticky}" class="sticky top-0 left-0 w-full  shadow z-50 inset-0 bg-white  lg:hidden "
+    <div [ngClass]="{'sticky-nav': isSticky}" class="fixed  shadow z-50 inset-0 bg-white  lg:hidden "
     [ngClass]="{
       'animate-slideInFromRight': isAnimatingIn,
       'animate-slideInToRight': !isAnimatingIn
